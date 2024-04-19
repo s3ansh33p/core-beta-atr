@@ -16,6 +16,9 @@ export function getOption(mode, places) {
     title: {
       left: "center",
       text: "Top 10 " + (mode === "teams" ? "Teams" : "Users"),
+      textStyle: {
+        color: "white"
+      },
     },
     tooltip: {
       trigger: "axis",
@@ -96,6 +99,7 @@ export function getOption(mode, places) {
       label: {
         normal: {
           position: "top",
+		color: "white"
         },
       },
       itemStyle: {
