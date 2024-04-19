@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container text-light">
     <div class="row">
 
       <div class="col-md-3 offset-md-1 mb-3 mb-md-0">
@@ -43,43 +43,43 @@
 
                 <div class="mb-3">
                   <b>{{ form.name.label(class="form-label") }}</b>
-                  {{ form.name(class="form-control", value=name) }}
+                  {{ form.name(class="form-control bg-dark text-light", value=name) }}
                 </div>
 
                 <div class="mb-3">
                   <b>{{ form.email.label(class="form-label") }}</b>
-                  {{ form.email(class="form-control", value=email) }}
+                  {{ form.email(class="form-control bg-dark text-light", value=email) }}
                 </div>
 
                 <div class="mb-3">
                   <b>{{ form.language.label(class="form-label") }}</b>
-                  {{ form.language(class="form-control form-select", value=language) }}
+                  {{ form.language(class="form-control bg-dark text-light form-select", value=language) }}
                 </div>
 
                 <hr>
 
                 <div class="mb-3">
                   <b>{{ form.confirm.label(class="form-label") }}</b>
-                  {{ form.confirm(class="form-control") }}
+                  {{ form.confirm(class="form-control bg-dark text-light") }}
                 </div>
                 <div class="mb-3">
                   <b>{{ form.password.label(class="form-label") }}</b>
-                  {{ form.password(class="form-control") }}
+                  {{ form.password(class="form-control bg-dark text-light") }}
                 </div>
 
                 <hr>
 
                 <div class="mb-3">
                   <b>{{ form.affiliation.label(class="form-label") }}</b>
-                  {{ form.affiliation(class="form-control", value=affiliation or "") }}
+                  {{ form.affiliation(class="form-control bg-dark text-light", value=affiliation or "") }}
                 </div>
                 <div class="mb-3">
                   <b>{{ form.website.label(class="form-label") }}</b>
-                  {{ form.website(class="form-control", value=website or "") }}
+                  {{ form.website(class="form-control bg-dark text-light", value=website or "") }}
                 </div>
                 <div class="mb-3">
                   <b>{{ form.country.label(class="form-label") }}</b>
-                  {{ form.country(class="form-control form-select", value=country) }}
+                  {{ form.country(class="form-control bg-dark text-light form-select", value=country) }}
                 </div>
 
                 <hr>
@@ -93,7 +93,7 @@
                   >
                     <strong>Success!</strong>
                     {% trans %}Your profile has been updated{% endtrans %}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <button type="button" class="btn-close" style="filter: invert(1)" data-bs-dismiss="alert" aria-label="Close">
                     </button>
                   </div>
 
@@ -103,7 +103,7 @@
                       <span class="sr-only">{% trans %}Error:{% endtrans %}</span>
                       <span x-text="msg"></span>
                       <button
-                          type="button" class="btn-close" data-bs-dismiss="alert"
+                          type="button" class="btn-close" style="filter: invert(1)" data-bs-dismiss="alert"
                           aria-label="Close"
                       >
                       </button>
@@ -124,11 +124,11 @@
               <form method="POST" x-data="TokensForm" @submit.prevent="generateToken()" class="mb-3">
                 <div class="modal fade" tabindex="-1" x-ref="tokenModal">
                   <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div class="modal-content bg-dark">
                       <div class="modal-header">
                         <h5 class="modal-title">{% trans %}API Key Generated{% endtrans %}</h5>
                         <button
-                            type="button" class="btn-close" data-bs-dismiss="modal"
+                            type="button" class="btn-close" style="filter: invert(1)" data-bs-dismiss="modal"
                             aria-label="Close"
                         ></button>
                       </div>
@@ -138,11 +138,11 @@
 
                         <div class="input-group mb-3">
                           <input
-                              type="text" class="form-control bg-white" x-ref="token"
+                              type="text" class="form-control bg-dark text-light" x-ref="token"
                               x-model="token" readonly
                           >
                           <button
-                              class="btn btn-outline-secondary px-3" type="button"
+                              class="btn btn-outline-primary px-3" type="button"
                               @click="copyToken()"
                           >
                             <i class="fas fa-clipboard"></i>
@@ -161,12 +161,12 @@
 
                 <div class="mb-3">
                   <b>{{ form.expiration.label(class="form-label") }}</b>
-                  {{ form.expiration(class="form-control") }}
+                  {{ form.expiration(class="form-control bg-dark text-light") }}
                 </div>
 
                 <div class="mb-3">
                   <b>{{ form.description.label(class="form-label") }}</b>
-                  {{ form.description(class="form-control", rows="3") }}
+                  {{ form.description(class="form-control bg-dark text-light", rows="3") }}
                 </div>
 
                 <div class="row">
@@ -190,11 +190,11 @@
                     aria-modal="true"
                 >
                   <div class="modal-dialog" role="document">
-                    <div class="modal-content">
+                    <div class="modal-content bg-dark">
                       <div class="modal-header">
                         <h5 class="modal-title">{% trans %}Delete Token{% endtrans %}</h5>
                         <button
-                            type="button" class="btn-close" data-bs-dismiss="modal"
+                            type="button" class="btn-close" style="filter: invert(1)" data-bs-dismiss="modal"
                             aria-label="Close"
                         >
                         </button>
@@ -218,7 +218,7 @@
                   </div>
                 </div>
 
-                <table class="table table-striped">
+                <table class="table table-dark table-striped">
                   <thead>
                   <tr>
                     <td class="text-center"><b>{% trans %}Created{% endtrans %}</b></td>

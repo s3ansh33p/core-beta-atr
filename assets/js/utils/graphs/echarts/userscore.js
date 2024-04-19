@@ -7,6 +7,9 @@ export function getOption(id, name, solves, awards) {
     title: {
       left: "center",
       text: "Score over Time",
+      textStyle: {
+      	color: "white"
+      },
     },
     tooltip: {
       trigger: "axis",
@@ -20,6 +23,9 @@ export function getOption(id, name, solves, awards) {
       align: "left",
       bottom: 0,
       data: [name],
+      textStyle: {
+	color:"white"
+      },
     },
     toolbox: {
       feature: {
@@ -34,11 +40,17 @@ export function getOption(id, name, solves, awards) {
         type: "category",
         boundaryGap: false,
         data: [],
+	axisLabel: {
+		color:'white'
+	}
       },
     ],
     yAxis: [
       {
         type: "value",
+	axisLabel: {
+		color:'white'
+	}
       },
     ],
     dataZoom: [
@@ -49,10 +61,12 @@ export function getOption(id, name, solves, awards) {
         filterMode: "filter",
         height: 20,
         top: 35,
-        fillerColor: "rgba(233, 236, 241, 0.4)",
       },
     ],
     series: [],
+    textStyle: {
+	color:"white"
+    },
   };
 
   const times = [];

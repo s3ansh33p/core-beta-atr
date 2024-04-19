@@ -90,3 +90,12 @@ select.form-control {
     background-color 0.3s,
     border-color 0.3s;
 }
+
+/* for dark mode changes */
+option {
+  background-color: $dark;
+}
+
+.navbar-dark {
+  background-color: black!important; /* override bs */
+}

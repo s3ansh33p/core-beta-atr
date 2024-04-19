@@ -32,6 +32,9 @@ export function getOption(mode, places) {
       align: "left",
       bottom: 35,
       data: [],
+      textStyle: {
+      	color:"white"
+      },
     },
     toolbox: {
       feature: {

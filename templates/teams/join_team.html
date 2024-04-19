@@ -6,7 +6,7 @@
       <h1>{% trans %}Join Team{% endtrans %}</h1>
     </div>
   </div>
-  <div class="container">
+  <div class="container text-light">
     <div class="row">
       <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
         {% include "components/errors.html" %}
@@ -15,12 +15,12 @@
           <form method="POST">
             <div class="mb-3">
               {{ form.name.label(class="form-label") }}
-              {{ form.name(class="form-control") }}
+              {{ form.name(class="form-control bg-dark text-light") }}
             </div>
 
             <div class="mb-3">
               {{ form.password.label(class="form-label") }}
-              {{ form.password(class="form-control") }}
+              {{ form.password(class="form-control bg-dark text-light") }}
             </div>
 
             <div class="row pt-3">

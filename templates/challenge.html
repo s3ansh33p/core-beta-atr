@@ -1,9 +1,9 @@
 <div :class="getStyles()" role="document" x-data="Challenge" x-init="id = {{ challenge.id }}">
-  <div class="modal-content">
+  <div class="modal-content bg-dark text-light">
     <div class="modal-body py-4 px-4 px-sm-5">
 
       <div>
-        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" style="filter: invert(1) brightness(10)" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -129,7 +129,7 @@
                       value="{{ challenge.id }}"
                   >
                   <input
-                      id="challenge-input" class="challenge-input form-control"
+                      id="challenge-input" class="challenge-input form-control bg-dark text-light"
                       type="text" name="submission"
                       @keyup.enter="submitChallenge()"
                       placeholder="{% trans %}Flag{% endtrans %}" x-model="submission"
@@ -141,7 +141,7 @@
                 {% block submit %}
                   <button
                       id="challenge-submit"
-                      class="challenge-submit btn btn-outline-secondary w-100 h-100" type="submit"
+                      class="challenge-submit btn btn-outline-primary w-100 h-100" type="submit"
                       @click.debounce.500ms="submitChallenge()"
                   >
                     {% trans %}Submit{% endtrans %}
@@ -199,7 +199,7 @@
           <div role="tabpanel" class="tab-pane fade" id="solves">
             <div class="row">
               <div class="col-md-12">
-                <table class="table table-striped text-center">
+                <table class="table table-dark table-striped text-center">
                   <thead>
                   <tr>
                     <td>
